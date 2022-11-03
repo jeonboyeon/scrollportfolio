@@ -1,183 +1,211 @@
-
-
 #intro {
-}
-#intro .intro_box {
-    overflow: hidden;
-    height: 500px;
+    height: 5000px;
 }
 
-.intro_bg {
-    width: 100%;
-    height: 100%;
-    background: #202B5C;
-    z-index: -1;
-    animation: slideBg 1.5s 0.5s ease-in-out forwards;
+/* 인트로 타이틀 */
+.intro_title {
+    color: #333;
+    top: 15%;
+    left: 23%;
+    font-size: 30px;
+    font-weight: 600;
+    z-index: 2;
 }
-
-@keyframes slideBg {
-    0% {
-        transform: translate(-200%, -50%);
-    }
-    100% {
-        transform: translate(-50%, -50%);
-    }
-}
-
-.intro_title01 {
-    color: #fff;
-    font-family: "Eulyoo1945";
-    font-size: 5vw;
-    font-weight: 700;
-    text-transform: uppercase;
-    left: 40%;
-    top: 30%;
-    opacity: 0;
-    animation: opacityTitle01 0.8s 2s ease-in-out forwards;
-}
-@keyframes opacityTitle01 {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-.intro_title01::before {
+.intro_title::before {
+    position: absolute;
     content: "";
-    position: absolute;
     width: 100%;
     height: 100%;
-    background: #202B5C;
-    animation: slideTitle01 1s 2s ease-in-out forwards;
-    opacity: 0;
-}
-@keyframes slideTitle01 {
-    0% {
-        opacity: 0;
-        transform: translateX(0);
-    }
-    10% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(500px);
-    }
-}
-
-.intro_title02 {
-    color: #8F9DDB;
-    font-family: "Eulyoo1945";
-    font-size: 4vw;
-    font-weight: 700;
-    text-transform: uppercase;
-    top: 40%;
-    opacity: 0;
-    animation: opacityTitle01 0.5s 3s ease-in-out forwards;
-}
-@keyframes opacityTitle01 {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.intro_title02::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #202B5C;
-    animation: slideTitle02 1s 3s ease-in-out forwards;
-    opacity: 0;
-}
-@keyframes slideTitle02 {
-    0% {
-        opacity: 0;
-        transform: translateY(0);
-    }
-    10% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(200px);
-    }
-}
-
-@keyframes slideBg {
-    0% {
-        transform: translate(-200%, -50%);
-    }
-    100% {
-        transform: translate(-50%, -50%);
-    }
-}
-
-.intro_desc {
-    color: #fff;
-    font-family: "Eulyoo1945";
-    font-size: 1.5vw;
-}
-
-.chevron {
-    position: absolute;
-    width: 28px;
-    height: 8px;
-    opacity: 0;
-    top: 250px;
-    transform: scale3d(0.5, 0.5, 0.5);
-    animation: move 3s ease-out infinite;
-}
-
-.chevron:first-child {
-    animation: move 3s ease-out 1s infinite;
-}
-
-.chevron:nth-child(2) {
-    animation: move 3s ease-out 2s infinite;
-}
-
-.chevron:before,
-.chevron:after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 51%;
     background: #fff;
+    animation: introTitle 0.5s 0.5s ease-in forwards;
 }
 
-.chevron:before {
-    left: 0;
-    transform: skew(0deg, 30deg);
-}
-
-.chevron:after {
-    right: 0;
-    width: 50%;
-    transform: skew(0deg, -30deg);
-}
-
-@keyframes move {
-    25% {
-        opacity: 1;
-    }
-    33% {
-        opacity: 1;
-        transform: translateY(30px);
-    }
-    67% {
-        opacity: 1;
-        transform: translateY(40px);
+@keyframes introTitle {
+    0% {
+        transform: translateX(0);
     }
     100% {
+        transform: translateX(220px);
+    }
+}
+
+/* 타이틀 써클 */
+.intro_titleBg {
+    top: 10%;
+    left: 18%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #aaa;
+    opacity: 0;
+    z-index: 1;
+    animation: appear 0.5s 1.5s ease-in forwards;
+}
+
+@keyframes appear {
+    0% {
         opacity: 0;
-        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 인포 */
+.info {
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+}
+.info > em {
+    color: #333;
+}
+
+.intro_design {
+    top: 23%;
+    left: 20%;
+    opacity: 0;
+    animation: sliderLeft01 0.5s 2s ease-out forwards;
+}
+.intro_email {
+    top: 27%;
+    left: 24.5%;
+    opacity: 0;
+    animation: sliderLeft02 0.5s 2.5s ease-out forwards;
+}
+
+@keyframes sliderLeft01 {
+    0% {
+        opacity: 0;
+        left: 16.5%;
+    }
+    100% {
+        opacity: 1;
+        left: 20%;
+    }
+}
+
+@keyframes sliderLeft02 {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 24.5%;
+    }
+}
+
+/* 이미지 */
+.intro_image01 {
+    top: 55%;
+    left: 25.5%;
+    background-color: #333;
+    width: 250px;
+    height: 400px;
+    box-shadow: 0 0 10px #333;
+    border: 2px solid #333; 
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    background-image: url("../img/intro_image01.png");
+    animation: slideUp 1s 3s ease-in-out forwards;
+}
+.intro_image02 {
+    top: 55%;
+    left: 42%;
+    background-color: #333;
+    width: 250px;
+    height: 400px;
+    box-shadow: 0 0 10px #333;
+    border: 2px solid #333; 
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    background-image: url("../img/intro_image02.png");
+    animation: slideUp 1s 4s ease-in-out forwards;
+}
+.intro_image03 {
+    top: 55%;
+    left: 58.55%;
+    width: 250px;
+    height: 400px;
+    box-shadow: 0 0 10px #333;
+    border: 2px solid #333; 
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    background-image: url("../img/intro_image03.png");
+    animation: slideUp 1s 5s ease-in-out forwards;
+}
+.intro_image04 {
+    top: 55%;
+    left: 75.15%;
+    width: 250px;
+    height: 400px;
+    box-shadow: 0 0 10px #333;
+    border: 2px solid #333; 
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    background-image: url("../img/intro_image04.png");
+    animation: slideUp 1s 6s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        top: 60%;
+    }
+    100% {
+        opacity: 1;
+        top: 55%;
+    }
+}
+
+.intro_img {
+    transition: box-shadow 0.4s;
+}
+.intro_img:hover {
+    box-shadow: 0 0 30px #aaa;
+}
+
+/* 스크롤 다운 */
+.scroll-downs {
+    top: 90%;
+    margin: auto;
+    width: 34px;
+    height: 55px;
+}
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #555;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #555;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+    animation-iteration-count: infinite;
+}
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
     }
 }
