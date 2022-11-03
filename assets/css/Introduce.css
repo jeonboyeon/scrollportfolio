@@ -1,0 +1,151 @@
+#introduce {
+}
+#introduce > .introduce_box {
+    height: 15000px;
+}
+
+.introduce_bg01 {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.introduce_bg02 {
+    width: 500px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+
+.title {
+    font-family: "Eulyoo1945";
+    font-size: 3vw;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.introduce_about {
+    color: #aa3b7f;
+}
+
+.introduce_profile {
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/about_profile.jpeg");
+    z-index: 2;
+}
+
+.info {
+    font-family: "Eulyoo1945";
+    color: #3c425c;
+    font-size: 1.1vw;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 2;
+}
+
+/* skill */
+.introduce_skillBg {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.introduce_skill {
+    color: #c26265;
+}
+
+.skill {
+    border-radius: 15px;
+    border: 5px solid #fff;
+    width: 68px;
+    height: 66px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.introduce_photoShop {
+    background-image: url("../img/photoshop.png");
+}
+
+.introduce_illust {
+    background-image: url("../img/free-icon-illustrator-5968472.png");
+}
+
+.introduce_figma {
+    background-color: #f5f5f5;
+    background-image: url("../img/free-icon-figma-5968705.png");
+}
+
+.introduce_html {
+    background-color: #f5f5f5;
+    background-image: url("../img/html-5.png");
+}
+
+.introduce_css {
+    background-color: #f5f5f5;
+    background-image: url("../img/free-icon-css-3-5968242.png");
+}
+
+.introduce_js {
+    background-color: #f5f5f5;
+    background-image: url("../img/js.png");
+}
+
+.introduce_clipStudio {
+    background-color: #f5f5f5;
+    background-image: url("../img/clipstudio.png");
+}
+
+.introduce_photoShopBg {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+.introduce_illustBg {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+.introduce_figmaBg {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+}
+
+.introduce_photoShopText {
+    color: #113c61;
+}
+.introduce_illustText {
+    color: #612011;
+}
+.introduce_figmaText {
+    color: #5f3b7c;
+}
+
+.introduceDesc {
+    border-radius: 10px;
+    padding: 30px 50px 30px 100px;
+    font-family: "NanumSquare";
+    font-size: 1.2vw;
+    line-height: 1.4;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+
+.introduce_photoShopDesc {
+    color: #113c61;
+}
+
+.introduce_illustDesc {
+    color: #612011;
+}
+
+.introduce_figmaDesc {
+    color: #5f3b7c;
+}
