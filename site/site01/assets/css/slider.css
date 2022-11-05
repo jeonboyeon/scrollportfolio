@@ -1,0 +1,74 @@
+.swiper-slide {
+    position: relative;
+}
+.slider__info {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: 0 360px;
+    transform: translateY(-50%);
+    text-align-last: left;
+}
+
+.slider__info > span {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin-bottom: 5px;
+}
+.slider__info > span.yellow {
+    background-color: #f29500;
+}
+.slider__info > span.brown {
+    background-color: #754800;
+}
+.slider__info > span.black {
+    background-color: #333;
+}
+
+
+.slider__info > h3 {
+    color: #333;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.slider__info > h3 > em {
+    color: #754800;
+}
+.slider__info > p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #754800;
+    margin-bottom: 30px;
+}
+
+.slider__moreBtn {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.slider__moreBtn > .slider__btn.yellow,
+.slider__moreBtn > .slider__btn.brown {
+}
+.slider__moreBtn > .slider__btn > a {
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.slider__moreBtn > .slider__btn.yellow > a {
+    padding: 10px 25px;
+    background-color: #f29500;
+}
+.slider__moreBtn > .slider__btn.brown > a {
+    padding: 10px 37px;
+    background-color: #754800;
+}

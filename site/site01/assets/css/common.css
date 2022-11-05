@@ -1,0 +1,91 @@
+/* header와 footer의 css 가 들어있습니다. */
+
+*,
+input,
+textarea,
+button {
+    font-family: "SUIT";
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    border-bottom: 1px solid #dcdcdc;
+    z-index: 10000;
+}
+#header > .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo */
+#header > .header__inner > .logo {
+    width: 20%;
+}
+#header > .header__inner > .logo > a {
+    color: #333;
+    font-size: 20px;
+    font-weight: 900;
+}
+#header > .header__inner > .logo > a > .logo__yellow {
+    color: #f29500;
+}
+
+/* nav */
+#header > .header__inner > .nav {
+    text-align: center;
+    width: 60%;
+    font-size: 15px;
+}
+#header > .header__inner > .nav > ul {
+}
+#header > .header__inner > .nav > ul > li {
+    display: inline-block;
+}
+#header > .header__inner > .nav > ul > li > a {
+    color: #666;
+    font-weight: 500;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+#header > .header__inner > .nav > ul > li > a:hover {
+    background-color: #f29500;
+    color: #fff;
+}
+
+/* login */
+#header > .header__inner > .login {
+    text-align: end;
+    width: 20%;
+}
+#header > .header__inner > .login > label {
+}
+#header > .header__inner > .login > button {
+    color: #f29500;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #f29500;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+#header > .header__inner > .login > button:hover {
+    color: #fff;
+    background-color: #f29500;
+}
