@@ -28,12 +28,17 @@
 /* 아이콘 */
 .skills_ico01 {
 }
-.ico {
+.ico1 {
     text-align: center;
     display: inline-block;
 }
-.ico > img {
+
+.ico1 > img {
     width: 50px;
     height: 50px;
     margin-bottom: 10px;
+}
+.ico2 > img {
+    width: 100px;
+    height: 110px;
 }
