@@ -62,12 +62,12 @@
 
 @keyframes upDown {
     0% {
-        top: 520px;
+        top: 450px;
     }
     50% {
-        top: 530px;
+        top: 460px;
     }
     100% {
-        top: 520px;
+        top: 450px;
     }
 }
