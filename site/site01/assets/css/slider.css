@@ -4,10 +4,9 @@
 .slider__info {
     position: absolute;
     top: 50%;
-    left: 0;
-    margin: 0 360px;
-    transform: translateY(-50%);
-    text-align-last: left;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
 }
 
 .slider__info > span {
@@ -28,7 +27,6 @@
 .slider__info > span.black {
     background-color: #333;
 }
-
 
 .slider__info > h3 {
     color: #333;
@@ -72,3 +70,35 @@
     padding: 10px 37px;
     background-color: #754800;
 }
+
+@media (max-width: 780px) {
+    .slider__info {
+        text-align: center;
+    }
+    .slider__info > h3 {
+        font-size: 30px;
+    }
+    .slider__moreBtn {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px){
+    .slider__info > span {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    .slider__info > h3 {
+        font-size: 18px;
+    }
+    .slider__info > p {
+        font-size: 13px;
+    }
+    .slider__btn {
+        margin-bottom: 10px;
+    }
+    .slider__moreBtn > .slider__btn > a {
+        font-size: 12px;
+    }
+}
+

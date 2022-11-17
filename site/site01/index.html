@@ -34,7 +34,7 @@
                 <div class="logo">
                     <a href="#c"><em class="logo__yellow">S</em>MILE :)</a>
                 </div>
-                <nav class="nav">
+                <nav id="nav" class="nav">
                     <ul>
                         <li><a href="#header">Header</a></li>
                         <li><a href="#slider">Slider</a></li>
@@ -50,6 +50,11 @@
                     <button type="button" class="login__btn" id="loginBtn" name="loginBtn" onclick="location.href='#c'">
                         LOG IN
                     </button>
+                </div>
+
+                <!-- ham button -->
+                <div class="ham">
+                    <span class="bar"></span>
                 </div>
             </div>
         </header>
@@ -152,7 +157,7 @@
             </section>
             <!-- // 이미지 텍스트 섹션 -->
 
-            <section id="text" class="text__wrap">
+            <section id="text" class="text__wrap blind">
                 <div class="text__inner container">
                     <span>😆</span>
                     <h3>스마일 <em>긍정 효과</em> 여섯 가지</h3>
@@ -239,7 +244,7 @@
             </section>
             <!-- // 텍스트 섹션 -->
 
-            <section id="banner" class="banner__wrap">
+            <section id="banner" class="banner__wrap blind">
                 <div class="banner__inner">
                     <div class="banner_box">
                         <p>
@@ -252,7 +257,7 @@
             </section>
             <!-- // 베너 섹션 -->
 
-            <section id="card" class="card__wrap">
+            <section id="card" class="card__wrap blind">
                 <div class="card__inner container">
                     <h3><em>웃음</em>에 관한 자료</h3>
                     <p>웃음에 관해 좀 더 자세하게 알아보자!</p>
@@ -300,7 +305,7 @@
                 </div>
             </section>
         </main>
-        <footer id="footer" class="footer__wrap">
+        <footer id="footer" class="footer__wrap blind">
             <div class="footer__inner">
                 <div class="footer__top">
                     <div class="footer_logo"><em>S</em>MILE :)</div>
@@ -353,6 +358,7 @@
         </footer>
 
         <!-- Swiper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
         <!-- Initialize Swiper -->
         <script>
@@ -371,6 +377,11 @@
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
+            });
+
+            $(".ham").click(function () {
+                $(this).toggleClass("active");
+                $("#nav").toggleClass("show");
             });
         </script>
     </body>

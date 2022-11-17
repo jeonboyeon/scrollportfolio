@@ -1,0 +1,379 @@
+#intro {
+    width: 100%;
+    overflow: hidden;
+}
+
+.intro_bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #b455ff 0%, #141266 100%);
+    z-index: -1;
+}
+
+.intro_title {
+    transform: translate(90%, -150%);
+    font-size: 60px;
+    text-align: right;
+    color: #fff;
+    z-index: 21;
+}
+.intro_subTitle {
+    color: #dcdcdc;
+    font-size: 25px;
+    z-index: 21;
+}
+
+.main_bg {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/main_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 20;
+}
+
+.wave {
+    opacity: 1;
+    width: 100%;
+    z-index: 10;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/* moon */
+.introMoon_bg {
+    transform: translate(-280%, -120%);
+    width: 300px;
+    height: 300px;
+    background-image: url("../img/moon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 별 */
+.stars {
+    width: 100%;
+    height: 100%;
+}
+
+.star {
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.8);
+}
+
+.small-stars .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+}
+.small-stars .star:nth-child(2n) {
+    opacity: 0;
+    -webkit-animation: star-blink 2.4s linear infinite alternate;
+    animation: star-blink 2.4s linear infinite alternate;
+}
+.small-stars .star:nth-child(1) {
+    left: 210px;
+    top: 50px;
+}
+.small-stars .star:nth-child(2) {
+    left: 400px;
+    top: 40px;
+}
+.small-stars .star:nth-child(3) {
+    left: 720px;
+    top: 120px;
+}
+.small-stars .star:nth-child(4) {
+    left: 140px;
+    top: 450px;
+}
+.small-stars .star:nth-child(5) {
+    left: 500px;
+    top: 300px;
+}
+.small-stars .star:nth-child(6) {
+    left: 150px;
+    top: 80px;
+}
+.small-stars .star:nth-child(7) {
+    right: 200px;
+    top: 360px;
+}
+.small-stars .star:nth-child(8) {
+    right: 70px;
+    top: 370px;
+}
+.small-stars .star:nth-child(9) {
+    right: 300px;
+    top: 340px;
+}
+.small-stars .star:nth-child(10) {
+    right: 130px;
+    top: 500px;
+}
+.small-stars .star:nth-child(11) {
+    right: 230px;
+    top: 430px;
+}
+.small-stars .star:nth-child(12) {
+    right: 600px;
+    top: 380px;
+}
+@-webkit-keyframes star-blink {
+    50% {
+        width: 3px;
+        height: 3px;
+        opacity: 1;
+    }
+}
+@keyframes star-blink {
+    50% {
+        width: 3px;
+        height: 3px;
+        opacity: 1;
+    }
+}
+
+.medium-stars .star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    opacity: 0;
+    -webkit-animation: star-blink 2.4s ease-in infinite alternate;
+    animation: star-blink 2.4s ease-in infinite alternate;
+}
+.medium-stars .star:nth-child(1) {
+    right: 300px;
+    top: 50px;
+}
+.medium-stars .star:nth-child(2) {
+    left: 600px;
+    top: 40px;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.medium-stars .star:nth-child(3) {
+    right: 720px;
+    top: 300px;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+.medium-stars .star:nth-child(4) {
+    left: 500px;
+    top: 300px;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+.medium-stars .star:nth-child(5) {
+    right: 300px;
+    top: 150px;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.medium-stars .star:nth-child(6) {
+    left: 740px;
+    top: 450px;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.medium-stars .star:nth-child(7) {
+    right: 240px;
+    top: 240px;
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+.medium-stars .star:nth-child(8) {
+    left: 30px;
+    top: 280px;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.medium-stars .star:nth-child(9) {
+    right: 560px;
+    top: 400px;
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+}
+.medium-stars .star:nth-child(10) {
+    right: 150px;
+    top: 10px;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.medium-stars .star:nth-child(11) {
+    left: 90px;
+    top: 200px;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+.medium-stars .star:nth-child(12) {
+    right: 20px;
+    top: 80px;
+    -webkit-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+}
+@keyframes star-blink {
+    50% {
+        width: 4px;
+        height: 4px;
+        opacity: 1;
+    }
+}
+
+/* 구름 */
+.cloud1 {
+    width: 535px;
+    height: 136px;
+    transform: translate(-380%, -200%) scale(0.8);
+    background-image: url("../img/cloud01_background.png");
+    animation: animateCloud 35s 3s linear infinite;
+}
+
+.cloud2 {
+    width: 501.29px;
+    height: 143.41px;
+    transform: translate(-400%, -200%) scale(0.8);
+    background-image: url("../img/cloud02_background.png");
+
+    animation: animateCloud 28s linear infinite;
+}
+
+.cloud3 {
+    width: 409px;
+    height: 130px;
+    transform: translate(-420%, -280%) scale(0.8);
+    background-image: url("../img/cloud03_background.png");
+    animation: animateCloud 20s 4s linear infinite;
+}
+
+@keyframes animateCloud {
+    0% {
+        left: 1300px;
+    }
+    100% {
+        left: 205%;
+    }
+}
+
+/* 유령 */
+.ghost_bg {
+    width: 403.53px;
+    height: 508.55px;
+    background-image: url("../img/ghost_background.png");
+    animation: ghost 5s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+}
+
+@keyframes ghost {
+    0% {
+        transform: translate(-230%, 0%);
+    }
+    50% {
+        transform: translate(-228%, -10%);
+    }
+    100% {
+        transform: translate(-230%, 0%);
+    }
+}
+
+/* 고래 */
+.whale_bg {
+    width: 978px;
+    height: 368px;
+    background-image: url("../img/whale_background.png");
+    animation: whale 35s 3s linear infinite;
+}
+
+@keyframes whale {
+    0% {
+        transform: translate(150%, -50%);
+    }
+    10% {
+        transform: translate(110%, -70%);
+    }
+    20% {
+        transform: translate(70%, -50%);
+    }
+    30% {
+        transform: translate(30%, -70%);
+    }
+    40% {
+        transform: translate(-10%, -50%);
+    }
+    50% {
+        transform: translate(-50%, -70%);
+    }
+    60% {
+        transform: translate(-90%, -50%);
+    }
+    70% {
+        transform: translate(-130%, -70%);
+    }
+    80% {
+        transform: translate(-170%, -50%);
+    }
+    90% {
+        transform: translate(-200%, -70%);
+    }
+    100% {
+        transform: translate(-240%, -70%);
+    }
+}
+.profile_img {
+    width: 345px;
+    height: 334px;
+    object-fit: cover;
+    clip-path: url(#myStar);
+}
+/* 심플 환영 인사 */
+.welcome_text {
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.4;
+    text-align: center;
+}
+.welcome_text em {
+    color: #dbaeff;
+    font-weight: 700;
+    animation: ddiyong 1s ease infinite;
+}
+
+@keyframes ddiyong {
+    0% {
+        font-size: 30px;
+    }
+    50% {
+        font-size: 25px;
+    }
+    100% {
+        font-size: 30px;
+    }
+}

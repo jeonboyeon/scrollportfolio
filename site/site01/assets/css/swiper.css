@@ -47,3 +47,14 @@
     background-color: #f29500;
     border-radius: 5px;
 }
+
+@media (max-width: 1200px) {
+    .swiper {
+        padding-top: 56px;
+    }
+}
+@media (max-width: 600px){
+       .swiper {
+        padding-top: 51px;
+    }
+}

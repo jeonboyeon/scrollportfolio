@@ -53,7 +53,6 @@ html {
 
 /* logo */
 #header > .header__inner > .logo {
-    width: 20%;
 }
 #header > .header__inner > .logo > a {
     color: #333;
@@ -67,7 +66,6 @@ html {
 /* nav */
 #header > .header__inner > .nav {
     text-align: center;
-    width: 60%;
     font-size: 15px;
 }
 #header > .header__inner > .nav > ul {
@@ -91,7 +89,6 @@ html {
 /* login */
 #header > .header__inner > .login {
     text-align: end;
-    width: 20%;
 }
 #header > .header__inner > .login > label {
 }
@@ -110,16 +107,108 @@ html {
     background-color: #f29500;
 }
 
+/* ham btn */
+.ham {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%) scale(0.7);
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    /*   background: rgba(255,255,255,0.3); */
+    border-radius: 3px;
+}
+
+.ham .bar {
+    display: block;
+    width: 0px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #f29500;
+    margin-top: 28px;
+    margin-left: 9px;
+    position: relative;
+}
+.ham .bar:before {
+    content: "";
+    width: 42px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #f29500;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: transform 0.3s;
+}
+.ham .bar:after {
+    content: "";
+    width: 42px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #f29500;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: transform 0.3s;
+}
+
+.ham.active span:before {
+    transform: rotate(45deg);
+    transition: transform 0.3s 0.8s;
+}
+
+.ham.active span:after {
+    transform: rotate(-45deg);
+    transition: transform 0.3s 0.8s;
+}
+
+.ham:before {
+    content: "";
+    width: 42px;
+    height: 4px;
+    background-color: #f29500;
+    border-radius: 3px;
+    position: absolute;
+    right: 9px;
+    bottom: 17px;
+    transition: width 0.3s 0.4s;
+}
+.ham:after {
+    content: "";
+    width: 42px;
+    height: 4px;
+    background-color: #f29500;
+    border-radius: 3px;
+    position: absolute;
+    left: 9px;
+    top: 17px;
+    transition: width 0.3s 0.4s;
+}
+
+.ham.active:before {
+    width: 0;
+    right: 9px;
+    bottom: 17px;
+}
+.ham.active:after {
+    width: 0;
+    left: 9px;
+    top: 17px;
+}
+
 /* footer */
 #footer {
-    background-color: #f29500;
+    border-top: 1px solid #dcdcdc;
+    background-color: #ffffff;
 }
 #footer > .footer__inner {
 }
 #footer > .footer__inner > .footer__top {
     padding: 20px 0;
     text-align: center;
-    border-bottom: 1px solid #754800;
+    border-bottom: 1px solid #dcdcdc;
 }
 #footer > .footer__inner > .footer__top > .footer_logo {
     color: #333;
@@ -127,7 +216,7 @@ html {
     font-size: 25px;
 }
 #footer > .footer__inner > .footer__top > .footer_logo > em {
-    color: #fff;
+    color: #f29500;
 }
 #footer > .footer__inner > .footer__bottom {
     display: flex;
@@ -139,7 +228,7 @@ html {
     width: 48%;
 }
 #footer > .footer__inner > .footer__bottom > .footer_info > .info {
-    color: #fff;
+    color: #f29500;
     font-weight: 500;
     font-size: 14px;
     line-height: 140%;
@@ -154,7 +243,7 @@ html {
 #footer > .footer__inner > .footer__bottom > .footer_info > .footer_sns > a {
     font-weight: 500;
     font-size: 14px;
-    color: #fff;
+    color: #f29500;
     margin-right: 10px;
 }
 #footer > .footer__inner > .footer__bottom > .footer_info > .footer_sns > a > img {
@@ -175,13 +264,12 @@ html {
     margin-left: 50px;
 }
 #footer > .footer__inner > .footer__bottom > .footer_category > .category > h4 {
-    color: #fff;
+    color: #f29500;
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 10px;
 }
 #footer > .footer__inner > .footer__bottom > .footer_category > .category > ul {
-
 }
 #footer > .footer__inner > .footer__bottom > .footer_category > .category > ul > li {
     margin-bottom: 10px;
@@ -193,4 +281,76 @@ html {
 }
 #footer > .footer__inner > .footer__bottom > .footer_category > .category > ul > li > a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+    #header > .header__inner > .nav {
+        position: absolute;
+        top: 56px;
+        right: -150px;
+
+        height: 100vh;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        text-align: right;
+        opacity: 0;
+
+        transition: right 0.4s, opacity 0.3s;
+    }
+    #header > .header__inner > .nav.show {
+        position: absolute;
+        top: 56px;
+        right: 0;
+
+        height: 100vh;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        text-align: right;
+        opacity: 1;
+
+        display: block;
+    }
+    #header > .header__inner > .nav > ul {
+        margin-left: 50px;
+    }
+    #header > .header__inner > .nav > ul > li {
+        display: block;
+        margin-bottom: 20px;
+    }
+    #header > .header__inner > .nav > ul > li:last-child {
+        margin-bottom: 0;
+    }
+    #header > .header__inner > .nav > ul > li > a {
+    }
+    .login {
+        position: absolute;
+        right: 70px;
+    }
+    .ham {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    #header > .header__inner > .logo > a {
+        font-size: 15px;
+    }
+    #header > .header__inner > .nav {
+        top: 51px;
+    }
+    #header > .header__inner > .nav.show {
+        top: 51px;
+    }
+    #header > .header__inner > .login > button {
+        font-size: 10px;
+    }
+    .ham {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%) scale(0.55);
+        display: block;
+    }
 }

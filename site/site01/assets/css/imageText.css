@@ -115,3 +115,29 @@
 #imageText > .imageText__inner > .imageText__right > .imageText_box:hover img:nth-child(2) {
     transform: scale(1.15);
 }
+
+@media (max-width: 1200px) {
+    #imageText > .imageText__inner {
+        display: block;
+        width: 96%;
+    }
+    #imageText > .imageText__inner > .imageText__left > p {
+        margin-bottom: 20px;
+    }
+    #imageText > .imageText__inner > .imageText__left {
+        text-align: center;
+        width: 100%;
+    }
+    #imageText > .imageText__inner > .imageText__right {
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    #imageText > .imageText__inner > .imageText__right > .imageText_box {
+        margin: 30px 15px 0px 15px;
+        width: 335px;
+    }
+    #imageText > .imageText__inner > .imageText__right > .imageText_box.right {
+        margin-top: 30px;
+    }
+}

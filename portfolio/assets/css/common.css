@@ -1,0 +1,31 @@
+* {
+    font-family: "NexonLv1Gothic";
+}
+body {
+}
+.fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    margin: 0 auto;
+    width: 1700px;
+    height: 1080px;
+    background-color: #333;
+
+    opacity: 0.2;
+    z-index: 100000;
+}
+
+.scroll {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #dcdcdc;
+    padding: 20px 30px;
+    border-radius: 10px;
+    z-index: 10000;
+}
