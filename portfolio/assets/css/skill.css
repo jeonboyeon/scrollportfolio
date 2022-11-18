@@ -1,6 +1,15 @@
 .skill__inner {
     height: 10000px;
 }
+.sea_me {
+    width: 150px;
+    height: 151.26px;
+    background-image: url("../img/sea_me.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
 .skill_bg01 {
     width: 100%;
     height: 100%;
@@ -71,3 +80,172 @@
         top: 570px;
     }
 }
+
+.coral1 {
+    width: 429.88px;
+    height: 357.1px;
+    background-image: url("../img/coral04_background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 6;
+
+    animation: upDown 2s 0.3s ease infinite;
+}
+.coral2 {
+    width: 312px;
+    height: 259px;
+    background-image: url("../img/coral05_background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 8;
+
+    animation: upDown 2s 0.4s ease infinite;
+}
+.coral3 {
+    width: 364px;
+    height: 302px;
+    background-image: url("../img/coral06_background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 7;
+
+    animation: upDown 2s 0.9s ease infinite;
+}
+
+.coral01-3 {
+    width: 492px;
+    height: 149px;
+    background-image: url("../img/coral02_background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 4;
+    animation: upDown 2s ease infinite;
+}
+.coral01-4 {
+    width: 492px;
+    height: 149px;
+    background-image: url("../img/coral02_background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    animation: upDown 2s ease infinite;
+}
+.coral02-2 {
+    width: 620.78px;
+    height: 188px;
+    background-image: url("../img/coral01_background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 3;
+
+    animation: upDown 2s 0.4s ease infinite;
+}
+.coral03-3 {
+    width: 383.03px;
+    height: 116px;
+    background-image: url("../img/coral03_background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    animation: upDown 2s 0.9s ease infinite;
+}
+
+/* 해파리 이미지 */
+.jellyfish1 {
+    width: 164.97px;
+    height: 165.25px;
+    background-image: url("../img/jellyfish_background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    animation: tongtong 7s 0.4s ease infinite;
+
+    z-index: 1;
+}
+.jellyfish2 {
+    width: 164.97px;
+    height: 165.25px;
+    background-image: url("../img/jellyfish_background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    animation: tongtong 5s ease infinite;
+
+    z-index: 1;
+}
+.jellyfish3 {
+    width: 164.97px;
+    height: 165.25px;
+    background-image: url("../img/jellyfish02_background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    animation: tongtong 8s 1s ease infinite;
+
+    z-index: 1;
+}
+
+@keyframes tongtong {
+    0% {
+        top: 500px;
+    }
+    20% {
+        top: 480px;
+    }
+    60% {
+        top: 500px;
+    }
+    80% {
+        top: 530px;
+    }
+    100% {
+        top: 500px;
+    }
+}
+
+/* 말풍선 이미지 */
+.skill_text {
+    z-index: 5;
+}
+.speechBubble {
+    width: 259px;
+    height: 68.5px;
+    object-fit: cover;
+    object-position: center;
+}
+.speechBubble_txt {
+    color: #555555;
+    position: absolute;
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 16px;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 빛줄기 */
+.beam {
+    width: 1129.41px;
+    height: 1199.2px;
+    background-image: url("../img/beam_background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    animation: opacity_beam 5s ease-in infinite;
+
+    z-index: 10;
+}
+
